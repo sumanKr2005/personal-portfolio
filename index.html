@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Suman Kumar Munu | Full Stack & GenAI Developer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== PARTICLE CONSTELLATION CANVAS ===== -->
+  <canvas id="particleCanvas" class="particle-canvas"></canvas>
+
+  <!-- ===== KINETIC BACKGROUND TEXT ===== -->
+  <div class="kinetic-bg" aria-hidden="true">
+    <span class="kinetic-track">SUMAN ✦ DEVELOPER ✦ GENAI ✦ FULL STACK ✦ SUMAN ✦ DEVELOPER ✦ GENAI ✦ FULL STACK ✦ </span>
+  </div>
+
+  <!-- ===== SCROLL SPOTLIGHT ===== -->
+  <div class="scroll-spotlight" id="scrollSpotlight"></div>
+
+  <!-- ===== CUSTOM CURSOR ===== -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ===== SECTION DOTS ===== -->
+  <nav class="section-dots" id="sectionDots">
+    <a href="#home" class="dot" data-section="home" aria-label="Home"></a>
+    <a href="#about" class="dot" data-section="about" aria-label="About"></a>
+    <a href="#skills" class="dot" data-section="skills" aria-label="Skills"></a>
+    <a href="#projects" class="dot" data-section="projects" aria-label="Projects"></a>
+    <a href="#experience" class="dot" data-section="experience" aria-label="Experience"></a>
+    <a href="#contact" class="dot" data-section="contact" aria-label="Contact"></a>
+  </nav>
+
+  <!-- ===== SCROLL PROGRESS BAR ===== -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ===== BACKGROUND ===== -->
+  <div class="bg-anim">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <div class="cursor-glow"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <div class="container nav-wrap">
+      <a href="#home" class="logo">
+        <span class="logo-icon"><i class="fas fa-code"></i></span>
+        <span class="logo-text">Suman<span class="dot">.</span></span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a href="#contact" class="btn btn-primary nav-cta">
+        <span>Hire Me</span>
+        <i class="fas fa-arrow-right"></i>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home" data-animate="hero">
+    <div class="container hero-grid">
+
+      <div class="hero-content">
+        <span class="eyebrow reveal">
+          <span class="dot-pulse"></span>
+          Available for opportunities
+        </span>
+
+        <h1 class="reveal kinetic-text" data-scramble="Hi, I'm Suman Kumar Munu">
+          Hi, I'm <span class="gradient-text breathing-text">Suman Kumar Munu</span>
+        </h1>
+
+        <div class="role-line reveal">
+          <span class="static">I build</span>
+          <span class="typed-wrap">
+            <span class="typed" id="typed"></span>
+            <span class="cursor">|</span>
+          </span>
+        </div>
+
+        <p class="hero-sub reveal">
+          Computer Science student passionate about building modern web
+          applications, AI-powered solutions, and secure systems. Exploring
+          GenAI, RAG, LLMs, and Prompt Engineering.
+        </p>
+
+        <div class="hero-buttons reveal">
+          <a href="#projects" class="btn btn-primary btn-large shine liquid-btn" data-liquid>
+            <i class="fas fa-rocket"></i>
+            <span>View Projects</span>
+          </a>
+          <a href="#contact" class="btn btn-outline btn-large liquid-btn" data-liquid>
+            <i class="fas fa-paper-plane"></i>
+            <span>Contact Me</span>
+          </a>
+        </div>
+
+        <div class="social-row reveal">
+          <a href="https://github.com/sumanKr2005" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://linkedin.com/in/suman-kumar-munu-07baa82b9" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="mailto:sumankumarkulna04@gmail.com" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="tel:+916206858568" aria-label="Phone">
+            <i class="fas fa-phone"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="hero-orbit">
+          <div class="orbit-badge badge-1"><i class="fas fa-code"></i> Full Stack</div>
+          <div class="orbit-badge badge-2"><i class="fas fa-brain"></i> GenAI</div>
+          <div class="orbit-badge badge-3"><i class="fas fa-database"></i> RAG</div>
+          <div class="orbit-badge badge-4"><i class="fas fa-terminal"></i> LLM</div>
+          <div class="orbit-ring"></div>
+          <div class="orbit-ring ring-2"></div>
+        </div>
+
+        <div class="hero-card tilt" data-magnetic>
+          <div class="card-top">
+            <span class="pill pill-cyan"><i class="fas fa-circle"></i> OPEN TO WORK</span>
+            <span class="pill pill-violet">Bengaluru, India</span>
+          </div>
+
+          <div class="card-body">
+            <div class="avatar">SKM</div>
+            <h3>Suman Kumar Munu</h3>
+            <p>Full Stack · GenAI · Prompt Engineer</p>
+          </div>
+
+          <div class="card-stats">
+            <div><h4 data-count="4">0</h4><span>Projects</span></div>
+            <div><h4 data-count="3">0</h4><span>Internships</span></div>
+            <div><h4>7.5</h4><span>CGPA</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <a href="#about" class="scroll-indicator">
+      <span></span><span></span>
+    </a>
+  </section>
+
+  <!-- ===== TICKER ===== -->
+  <div class="ticker">
+    <div class="ticker-track">
+      <span>FULL STACK</span><i>✦</i>
+      <span>GENAI</span><i>✦</i>
+      <span>RAG</span><i>✦</i>
+      <span>LLM</span><i>✦</i>
+      <span>PROMPT ENGINEERING</span><i>✦</i>
+      <span>REACT</span><i>✦</i>
+      <span>NODE.JS</span><i>✦</i>
+      <span>PYTHON</span><i>✦</i>
+      <span>FULL STACK</span><i>✦</i>
+      <span>GENAI</span><i>✦</i>
+      <span>RAG</span><i>✦</i>
+      <span>LLM</span><i>✦</i>
+      <span>PROMPT ENGINEERING</span><i>✦</i>
+      <span>REACT</span><i>✦</i>
+      <span>NODE.JS</span><i>✦</i>
+      <span>PYTHON</span><i>✦</i>
+    </div>
+  </div>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about" id="about" data-animate="about">
+    <div class="container">
+      <span class="section-eyebrow reveal">ABOUT ME</span>
+      <h2 class="section-title reveal">
+        Turning ideas into <span class="gradient-text">real products</span>
+      </h2>
+
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            I'm a <strong>Computer Science and Engineering</strong> student at
+            AMC Engineering College, Bengaluru, with hands-on experience in
+            frontend web development, cloud security, Python programming,
+            and hackathon-based project development.
+          </p>
+          <p>
+            Currently exploring <strong>GenAI, RAG, LLMs, and Prompt Engineering</strong>
+            to build intelligent applications that solve real-world problems.
+            I enjoy working on the intersection of <strong>AI + Web Development</strong>.
+          </p>
+
+          <div class="about-info">
+            <div class="info-item">
+              <i class="fas fa-graduation-cap"></i>
+              <div>
+                <strong>B.E. Computer Science</strong>
+                <span>AMC Engineering College · 2023-2027</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <strong>Bengaluru, India</strong>
+                <span>Open to remote / hybrid</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-trophy"></i>
+              <div>
+                <strong>Top 16 Global Finalist</strong>
+                <span>Cardano Asia Hackathon 2025</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-stats reveal">
+          <div class="stat-box" data-magnetic>
+            <h3>7.5</h3>
+            <p>Current CGPA</p>
+          </div>
+          <div class="stat-box" data-magnetic>
+            <h3>4+</h3>
+            <p>Projects Built</p>
+          </div>
+          <div class="stat-box" data-magnetic>
+            <h3>3</h3>
+            <p>Internships</p>
+          </div>
+          <div class="stat-box" data-magnetic>
+            <h3>16</h3>
+            <p>Global Rank</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="skills" id="skills" data-animate="skills">
+    <div class="container">
+      <span class="section-eyebrow reveal">MY SKILLS</span>
+      <h2 class="section-title reveal">
+        Tools I <span class="gradient-text">work with</span>
+      </h2>
+      <p class="section-sub reveal">
+        A curated stack of technologies I use to build modern applications.
+      </p>
+
+      <div class="skills-grid">
+        <article class="skill-card reveal tilt" data-magnetic>
+          <div class="skill-icon"><i class="fas fa-laptop-code"></i></div>
+          <h3>Frontend</h3>
+          <ul>
+            <li>HTML5 & CSS3</li>
+            <li>JavaScript (ES6+)</li>
+            <li>React</li>
+            <li>Tailwind CSS</li>
+            <li>Responsive Design</li>
+          </ul>
+        </article>
+
+        <article class="skill-card reveal tilt" data-magnetic>
+          <div class="skill-icon"><i class="fas fa-server"></i></div>
+          <h3>Backend</h3>
+          <ul>
+            <li>Node.js & Express</li>
+            <li>Python (FastAPI, Flask)</li>
+            <li>MongoDB & Firebase</li>
+            <li>SQL (Basics)</li>
+            <li>REST APIs</li>
+          </ul>
+        </article>
+
+        <article class="skill-card reveal tilt" data-magnetic>
+          <div class="skill-icon"><i class="fas fa-brain"></i></div>
+          <h3>GenAI & LLM</h3>
+          <ul>
+            <li>OpenAI / Claude API</li>
+            <li>LangChain</li>
+            <li>RAG Systems</li>
+            <li>Vector DB (ChromaDB)</li>
+            <li>Prompt Engineering</li>
+          </ul>
+        </article>
+
+        <article class="skill-card reveal tilt" data-magnetic>
+          <div class="skill-icon"><i class="fas fa-shield-halved"></i></div>
+          <h3>Security</h3>
+          <ul>
+            <li>App Security</li>
+            <li>Web Security</li>
+            <li>Zero Trust Security</li>
+            <li>Cloud Security</li>
+            <li>Secure Coding</li>
+          </ul>
+        </article>
+
+        <article class="skill-card reveal tilt" data-magnetic>
+          <div class="skill-icon"><i class="fas fa-tools"></i></div>
+          <h3>Tools</h3>
+          <ul>
+            <li>Git & GitHub</li>
+            <li>VS Code</li>
+            <li>Streamlit</li>
+            <li>Postman</li>
+            <li>Vercel / Netlify</li>
+          </ul>
+        </article>
+
+        <article class="skill-card reveal tilt" data-magnetic>
+          <div class="skill-icon"><i class="fas fa-code-branch"></i></div>
+          <h3>Programming</h3>
+          <ul>
+            <li>Python</li>
+            <li>Java</li>
+            <li>JavaScript</li>
+            <li>SQL</li>
+            <li>JSON Handling</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="projects" id="projects" data-animate="projects">
+    <div class="container">
+      <span class="section-eyebrow reveal">PORTFOLIO</span>
+      <h2 class="section-title reveal">
+        Featured <span class="gradient-text">Projects</span>
+      </h2>
+      <p class="section-sub reveal">
+        Drag to explore — Real projects I've built combining AI, web development, and security.
+      </p>
+
+      <div class="projects-grid" data-drag-scroll>
+
+        <article class="project-card reveal tilt">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-shield-virus"></i></div>
+            <span class="project-tag">ML · Security</span>
+          </div>
+          <h3>Zero-Day Malware Detection</h3>
+          <p>Machine learning approach to detect zero-day malware using behavioral graphs derived from dynamic execution traces. Modeled process creation, API calls, and network activities as graph-based interactions.</p>
+          <div class="project-stack">
+            <span>Python</span>
+            <span>NetworkX</span>
+            <span>Streamlit</span>
+            <span>GNN</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/sumanKr2005" target="_blank">
+              <i class="fab fa-github"></i> Code
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card reveal tilt">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-seedling"></i></div>
+            <span class="project-tag">Full Stack</span>
+          </div>
+          <h3>Anaaj Mitra</h3>
+          <p>Multi-tenant civic-tech platform for national ration management. Engineered a telecommunication-integrated IVR booking engine using the Exotel API with optimized resource allocation.</p>
+          <div class="project-stack">
+            <span>REST API</span>
+            <span>Exotel</span>
+            <span>Node.js</span>
+            <span>IVR</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/sumanKr2005" target="_blank">
+              <i class="fab fa-github"></i> Code
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card reveal tilt">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-vote-yea"></i></div>
+            <span class="project-tag">Blockchain</span>
+          </div>
+          <h3>Anonymous Voting System</h3>
+          <p>Decentralized anonymous voting protocol using Zero-Knowledge Proofs (ZKP) on the Midnight network. Optimized state-verification and audited zero-knowledge circuit boundaries.</p>
+          <div class="project-stack">
+            <span>ZKP</span>
+            <span>Midnight</span>
+            <span>React</span>
+            <span>TypeScript</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/sumanKr2005" target="_blank">
+              <i class="fab fa-github"></i> Code
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card reveal tilt">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-wheat-awn"></i></div>
+            <span class="project-tag">Frontend · AI</span>
+          </div>
+          <h3>KrishiGuide</h3>
+          <p>AI-powered crop and farming assistant helping Indian farmers choose suitable crops based on climate, soil, season, and state. Bilingual Hindi-English interface with structured JSON data.</p>
+          <div class="project-stack">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>JSON</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/sumanKr2005" target="_blank">
+              <i class="fab fa-github"></i> Code
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE ===== -->
+  <section class="experience" id="experience" data-animate="experience">
+    <div class="container">
+      <span class="section-eyebrow reveal">EXPERIENCE</span>
+      <h2 class="section-title reveal">
+        My <span class="gradient-text">Journey</span>
+      </h2>
+
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">Mar 2026 — Sep 2026</span>
+            <h3>Frontend Developer</h3>
+            <h4>ElevanceSkills · Remote</h4>
+            <p>Working on frontend web development tasks and building responsive user interfaces using HTML, CSS, JavaScript, and modern frontend practices.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">Apr 2025 — Jun 2025</span>
+            <h3>Zero Trust Cloud Security Intern</h3>
+            <h4>EduSkills · 10 Weeks</h4>
+            <p>Completed a 10-week Zero Trust Cloud Security Virtual Internship supported by Zscaler. Gained exposure to Zero Trust principles, cloud security, and secure access models.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">Feb 2025 — Mar 2025</span>
+            <h3>Python Virtual Intern</h3>
+            <h4>CodSoft · Remote</h4>
+            <p>Completed a Python-focused virtual internship with programming and problem-solving tasks. Strengthened Python fundamentals through practical assignments.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ACHIEVEMENTS ===== -->
+  <section class="achievements" data-animate="achievements">
+    <div class="container">
+      <span class="section-eyebrow reveal">ACHIEVEMENTS</span>
+      <h2 class="section-title reveal">
+        What I'm <span class="gradient-text">proud of</span>
+      </h2>
+
+      <div class="achievements-grid">
+        <div class="ach-card reveal tilt" data-magnetic>
+          <div class="ach-icon"><i class="fas fa-trophy"></i></div>
+          <h3>Top 16 Global Finalist</h3>
+          <p>Cardano Asia Hackathon 2025 — Project "Invisible Voting Booth" (ZK-based private voting system).</p>
+          <span class="ach-tag">Hackathon</span>
+        </div>
+
+        <div class="ach-card reveal tilt" data-magnetic>
+          <div class="ach-icon"><i class="fas fa-certificate"></i></div>
+          <h3>Zero Trust Cloud Security</h3>
+          <p>Certified by EduSkills / Zscaler — 10-week virtual internship program.</p>
+          <span class="ach-tag">Certification</span>
+        </div>
+
+        <div class="ach-card reveal tilt" data-magnetic>
+          <div class="ach-icon"><i class="fas fa-award"></i></div>
+          <h3>Frontend Web Development</h3>
+          <p>Self-certified through hands-on projects and continuous learning.</p>
+          <span class="ach-tag">Certification</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact" id="contact" data-animate="contact">
+    <div class="container">
+      <span class="section-eyebrow reveal">GET IN TOUCH</span>
+      <h2 class="section-title reveal">
+        Let's build something <span class="gradient-text">together</span>
+      </h2>
+      <p class="section-sub reveal">
+        Have a project in mind or want to collaborate? Drop me a message!
+      </p>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <div class="info-card" data-magnetic>
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:sumankumarkulna04@gmail.com">sumankumarkulna04@gmail.com</a>
+            </div>
+          </div>
+          <div class="info-card" data-magnetic>
+            <i class="fas fa-phone"></i>
+            <div>
+              <h4>Phone</h4>
+              <a href="tel:+916206858568">+91 62068 58568</a>
+            </div>
+          </div>
+          <div class="info-card" data-magnetic>
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h4>Location</h4>
+              <span>Bengaluru, Karnataka, India</span>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="John Doe" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Project inquiry" required />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-large shine liquid-btn" data-liquid>
+            <i class="fas fa-paper-plane"></i>
+            <span>Send Message</span>
+          </button>
+
+          <p class="form-status" id="formStatus"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-wrap">
+      <div class="footer-brand">
+        <a href="#home" class="logo">
+          <span class="logo-icon"><i class="fas fa-code"></i></span>
+          <span class="logo-text">Suman<span class="dot">.</span></span>
+        </a>
+        <p>Full Stack Developer · GenAI Enthusiast · Building the future with code.</p>
+      </div>
+
+      <div class="footer-links">
+        <h5>Navigate</h5>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-social">
+        <h5>Connect</h5>
+        <div class="social-icons">
+          <a href="https://github.com/sumanKr2005" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://linkedin.com/in/suman-kumar-munu-07baa82b9" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="mailto:sumankumarkulna04@gmail.com" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="tel:+916206858568" aria-label="Phone">
+            <i class="fas fa-phone"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom container">
+      <p>© 2026 Suman Kumar Munu. All rights reserved.</p>
+      <a href="#home" class="scroll-top">
+        Scroll to Top <i class="fas fa-arrow-up"></i>
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
